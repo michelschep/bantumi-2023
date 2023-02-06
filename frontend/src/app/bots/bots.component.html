@@ -1,0 +1,22 @@
+<p>bots works!</p>
+
+<p *ngIf="!bots"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="bots">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Bot</th>
+      <th>Created</th>
+      <th>Elo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bot of bots">
+      <td>{{ bot.user }}</td>
+      <td>{{ bot.name }}</td>
+      <td>{{ bot.created }}</td>
+      <td>{{ bot.elo }}</td>
+    </tr>
+  </tbody>
+</table>
